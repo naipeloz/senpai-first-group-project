@@ -1,12 +1,11 @@
+import Layout from './components/Layout';
 import logo from './logo.svg';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-      </header>
-    </div>
+    <Layout>
+      <img src={logo} className="App-logo" alt="logo" width="125"/>
+    </Layout>
   );
 }
 
