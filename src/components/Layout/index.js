@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Header from '../Header';
 import Main from '../Main';
 import Footer from '../Footer';
+import News from '../News';
 
 const Layout = ({ children }) => {
   const [ darkMode, setDarkMode ] = useState(false);
@@ -20,7 +21,10 @@ const Layout = ({ children }) => {
         isDarkMode={darkMode}
       />
       <Main 
-        isDarkMode={darkMode}
+        isDarkMode={darkMode} 
+      />
+      <News 
+        isDarkMode={darkMode} 
       />
       <Footer 
         isDarkMode={darkMode}
