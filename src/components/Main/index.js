@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Sidebar from '../Sidebar';
+import Content from '../Content';
 
 const Main = ({ darkMode }) =>  {
   return (
@@ -8,9 +9,9 @@ const Main = ({ darkMode }) =>  {
         <Sidebar
           isDarkMode={darkMode}
         />
-        <main className="bg-yellow-300 w-3/4">
-          Main content
-        </main>
+        <Content 
+          isDarkMode={darkMode}
+        />
       </div>
     </>
   )
