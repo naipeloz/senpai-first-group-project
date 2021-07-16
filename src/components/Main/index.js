@@ -1,16 +1,16 @@
-import React, { Component } from 'react';
+import React from 'react';
 import Sidebar from '../Sidebar';
 import Content from '../Content';
 
-const Main = ({ darkMode }) =>  {
+const Main = ({ isDarkMode }) =>  {
   return (
     <>
       <div className="flex bg-red-300 w-full">
         <Sidebar
-          isDarkMode={darkMode}
+          isDarkMode={isDarkMode}
         />
         <Content 
-          isDarkMode={darkMode}
+          isDarkMode={isDarkMode}
         />
       </div>
     </>
