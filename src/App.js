@@ -32,7 +32,9 @@ function App() {
       
       <Switch>
         <Route path='/news/:id?'>
-          <NewsPage />
+          <NewsPage 
+            isDarkMode={darkMode}
+          />
         </Route>
         <Route path='/' exact>
           <HomePage 
