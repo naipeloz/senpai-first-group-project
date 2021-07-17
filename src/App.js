@@ -6,6 +6,7 @@ import {
 } from 'react-router-dom';
 import HomePage from './pages/Home';
 import NewsPage from './pages/News';
+import { FetchExample } from './pages/Example';
 
 function App() {
   const [ darkMode, setDarkMode ] = useState(true);
@@ -33,6 +34,9 @@ function App() {
       <Switch>
         <Route path='/news/:id?'>
           <NewsPage />
+        </Route>
+        <Route path='/fetch-example'>
+          <FetchExample />
         </Route>
         <Route path='/' exact>
           <HomePage 
