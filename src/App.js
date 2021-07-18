@@ -7,6 +7,7 @@ import {
 import HomePage from './pages/Home';
 import NewsPage from './pages/News';
 import { FetchWeather } from './pages/Weather';
+import { FetchExample } from './pages/Example';
 
 function App() {
   const [ darkMode, setDarkMode ] = useState(true);
@@ -30,7 +31,7 @@ function App() {
         </button>
         <p className='text-blue-500 text-xs'>{date}</p>
       </div>
-      
+
       <Switch>
         <Route path='/news/:id?'>
           <NewsPage />
@@ -39,6 +40,8 @@ function App() {
           <FetchWeather 
           isDarkMode={darkMode}
           />
+        <Route path='/fetch-example'>
+          <FetchExample />
         </Route>
         <Route path='/' exact>
           <HomePage 
