@@ -7,6 +7,7 @@ import {
 import HomePage from './pages/Home';
 import NewsPage from './pages/News';
 import { FetchExample } from './pages/Example';
+import Conversor from './components/Divisas';
 
 function App() {
   const [ darkMode, setDarkMode ] = useState(true);
@@ -42,6 +43,9 @@ function App() {
           <HomePage 
             isDarkMode={darkMode}
           />
+        </Route>
+        <Route path='/Currency'>
+            <Conversor/>
         </Route>
       </Switch>
     </Router>
