@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 
-const Team = ({temperatura,ciudad,name}) => {
+const Weather = ({temperatura,ciudad,name}) => {
   return (
     <div className="bg-gray-300 m-4 p-2 rounded">
 
@@ -15,4 +15,4 @@ const Team = ({temperatura,ciudad,name}) => {
   )
 }
 
-export default Team;
+export default Weather;

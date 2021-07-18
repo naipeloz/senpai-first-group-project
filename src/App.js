@@ -6,7 +6,7 @@ import {
 } from 'react-router-dom';
 import HomePage from './pages/Home';
 import NewsPage from './pages/News';
-import { FetchExample } from './pages/Example';
+import { FetchWeather } from './pages/Weather';
 
 function App() {
   const [ darkMode, setDarkMode ] = useState(true);
@@ -35,8 +35,8 @@ function App() {
         <Route path='/news/:id?'>
           <NewsPage />
         </Route>
-        <Route path='/fetch-example'>
-          <FetchExample />
+        <Route path='/fetch-weather'>
+          <FetchWeather />
         </Route>
         <Route path='/' exact>
           <HomePage 
