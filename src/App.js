@@ -36,7 +36,9 @@ function App() {
           <NewsPage />
         </Route>
         <Route path='/fetch-weather'>
-          <FetchWeather />
+          <FetchWeather 
+          isDarkMode={darkMode}
+          />
         </Route>
         <Route path='/' exact>
           <HomePage 

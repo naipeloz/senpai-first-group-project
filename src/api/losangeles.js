@@ -1,4 +1,4 @@
-const YOUR_ACCESS_KEY = '5196ecaa071e2fbd9f6d266d023e784d';
+const YOUR_ACCESS_KEY = 'bd4c948f6058e4f497cdc3d4a72b9e9a';
 const BASE_URL = 'http://api.weatherstack.com/'
 
 

@@ -6,7 +6,7 @@ import { getElPaso } from '../api/elpaso';
 import { getLosAngeles } from '../api/losangeles';
 import Weather from '../components/Weather';
 
-export const  FetchWeather = () => {
+export const  FetchWeather = (props) => {
   const [climaMvd, setClimaMvd] = useState([]);
   const [climaCaracas, setClimaCaracas] = useState([]);  
   const [climaMonterrey, setClimaMonterrey] = useState([]);
@@ -59,32 +59,36 @@ export const  FetchWeather = () => {
   }, []);
 
   return (
-    <div className="container mx-auto">
-    {<Weather
+    <div className="flex flex-nowrap justify-around ">
+     <div className={`${!props.isDarkMode ? 'bg-gray-200 text-black' : 'bg-gray-900 text-white'}`}>
+      {<Weather
         temperatura={climaMvd.current}
         ciudad={climaMvd.location}
-    />}
-      <div className="container mx-auto">
+      />
+      }
+     </div>
+     <div className={`${!props.isDarkMode ? 'bg-gray-200 text-black' : 'bg-gray-900 text-white'}`}>
       {<Weather
           temperatura={climaCaracas.current}
           ciudad={climaCaracas.location}
       />
       }
-    </div>
-    <div className="container mx-auto">
+     </div>
+     <div className={`${!props.isDarkMode ? 'bg-gray-200 text-black' : 'bg-gray-900 text-white'}`}>
       {<Weather
           temperatura={climaMonterrey.current}
           ciudad={climaMonterrey.location}
       />
       }
-    </div>
-    <div className="container mx-auto">
+     </div>
+     <div className={`${!props.isDarkMode ? 'bg-gray-200 text-black' : 'bg-gray-900 text-white'}`}>
       {<Weather
           temperatura={climaElPaso.current}
           ciudad={climaElPaso.location}
       />
       }
-    </div><div className="container mx-auto">
+     </div>
+     <div className={`${!props.isDarkMode ? 'bg-gray-200 text-black' : 'bg-gray-900 text-white'}`}>
       {<Weather
           temperatura={climaLosAngeles.current}
           ciudad={climaLosAngeles.location}
@@ -92,6 +96,7 @@ export const  FetchWeather = () => {
       }
     </div>
   </div>
+    
    
   )
 }
