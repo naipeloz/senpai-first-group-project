@@ -31,7 +31,7 @@ function App() {
       </div>
       
       <Switch>
-        <Route path='/news/:id?'>
+        <Route path='/news/:cat?'>
           <NewsPage 
             isDarkMode={darkMode}
           />
