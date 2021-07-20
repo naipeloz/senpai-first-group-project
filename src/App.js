@@ -7,7 +7,7 @@ import {
 import HomePage from './pages/Home';
 import NewsPage from './pages/News';
 import { FetchExample } from './pages/Example';
-import Conversor from './components/Divisas';
+import Conversor from '../src/components/divisas-honesto/index';
 
 function App() {
   const [ darkMode, setDarkMode ] = useState(true);
