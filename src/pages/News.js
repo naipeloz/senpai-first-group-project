@@ -49,7 +49,7 @@ import {
       <div className="buscador flex">
           <div className="m-4">
               <label>Categorias</label>              
-              <select name="cat"   className='bg-white text-black p-1 m-1' onChange={changeCat()}>
+              <select id="cat" name="cat"   className='bg-white text-black p-1 m-1' onChange={changeCat()}>
                   <option value="business">Negocios</option>
                   <option value="entertainment" >Entretenimiento</option>
                   <option value="general" >General</option>
@@ -60,7 +60,7 @@ import {
               </select>
           </div>
           <div className="m-4">            
-            <inpu id="buscar" type="text" name="search" className=" m-1"/> 
+            <input id="buscar" type="text" name="search" className=" m-1"/> 
             <button>Buscar</button>
           </div>
       </div>
