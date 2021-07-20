@@ -34,6 +34,7 @@ function App() {
           <Link className="font-bold" to="/text">
             Descripcion
           </Link>
+          <button className="ml-4 p-4 bg-black text-white">Dark Mode</button>
         </div>
       <Switch>
           <Route path="/" exact> 
