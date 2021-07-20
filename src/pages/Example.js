@@ -8,6 +8,7 @@ export const FetchExample = () => {
     getStaffTeam()
       .then((response)=> {
         setMatches(response);
+        console.log(response)
       })
       .catch();
   }, []);

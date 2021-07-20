@@ -7,6 +7,8 @@ import {
 import HomePage from './pages/Home';
 import NewsPage from './pages/News';
 import { FetchExample } from './pages/Example';
+import FutResults from './pages/FutResults';
+
 
 function App() {
   const [ darkMode, setDarkMode ] = useState(true);
@@ -40,6 +42,11 @@ function App() {
         </Route>
         <Route path='/' exact>
           <HomePage 
+            isDarkMode={darkMode}
+          />
+        </Route>
+        <Route path='/FutResults' exact>
+          <FutResults
             isDarkMode={darkMode}
           />
         </Route>
