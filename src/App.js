@@ -6,6 +6,7 @@ import {
 } from 'react-router-dom';
 import HomePage from './pages/Home';
 import NewsPage from './pages/News';
+import { FetchWeather } from './pages/Weather';
 import { FetchExample } from './pages/Example';
 
 function App() {
@@ -34,6 +35,11 @@ function App() {
       <Switch>
         <Route path='/news/:id?'>
           <NewsPage />
+        </Route>
+        <Route path='/fetch-weather'>
+          <FetchWeather 
+            isDarkMode={darkMode}
+          />
         </Route>
         <Route path='/fetch-example'>
           <FetchExample />
