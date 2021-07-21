@@ -10,7 +10,8 @@ export const FutResults = () => {
         if(response.error){
           alert("No se pudo consultar")
         } else {
-          setMatches(response)
+          const results = response;
+          setMatches(results.slice(0,6))
         }
       })
       .catch((error)=> {
