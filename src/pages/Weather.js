@@ -1,9 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { getMontevideo } from '../api/mvd';
-import { getCaracas } from '../api/caracas';
-import { getMonterrey } from '../api/monterrey'
-import { getElPaso } from '../api/elpaso';
-import { getLosAngeles } from '../api/losangeles';
+import getWeather from '../api/weather';
 import Weather from '../components/Weather';
 
 export const  FetchWeather = (props) => {
@@ -13,17 +9,15 @@ export const  FetchWeather = (props) => {
   const [climaElPaso, setClimaElPaso] = useState([]);
   const [climaLosAngeles, setClimaLosAngeles] = useState([]);
   useEffect(() => {
-    getMontevideo()
+    getWeather('Montevideo')
       .then((response)=> {
         setClimaMvd(response);
-        console.log(response);
       })
       .catch();
-      
   }, []);
  
   useEffect(() => {
-    getCaracas()
+    getWeather('Caracas')
       .then((response)=> {
         setClimaCaracas(response);
       })
@@ -32,7 +26,7 @@ export const  FetchWeather = (props) => {
   }, []);
 
   useEffect(() => {
-    getMonterrey()
+    getWeather('Monterrey')
       .then((response)=> {
         setClimaMonterrey(response);
       })
@@ -41,7 +35,7 @@ export const  FetchWeather = (props) => {
   }, []);
 
   useEffect(() => {
-    getElPaso()
+    getWeather('El Paso, Texas')
       .then((response)=> {
         setClimaElPaso(response);
       })
@@ -50,7 +44,7 @@ export const  FetchWeather = (props) => {
   }, []);
 
   useEffect(() => {
-    getLosAngeles()
+    getWeather('Los Angeles')
       .then((response)=> {
         setClimaLosAngeles(response);
       })
@@ -96,7 +90,5 @@ export const  FetchWeather = (props) => {
       }
     </div>
   </div>
-    
-   
   )
 }

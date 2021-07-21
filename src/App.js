@@ -38,8 +38,9 @@ function App() {
         </Route>
         <Route path='/fetch-weather'>
           <FetchWeather 
-          isDarkMode={darkMode}
+            isDarkMode={darkMode}
           />
+        </Route>
         <Route path='/fetch-example'>
           <FetchExample />
         </Route>
