@@ -7,16 +7,14 @@ export const FutResults = () => {
   useEffect(() => {
     getResults()
       .then((response)=> {
-       
         if(response.error){
-          console.log(response) 
-        } else{
+          alert("No se pudo consultar")
+        } else {
           setMatches(response)
         }
-        console.log(response)
       })
       .catch((error)=> {
-        console.log(error)
+        alert("No se pudo consultar la API")
       });
     
   }, []);
@@ -29,6 +27,8 @@ export const FutResults = () => {
           awayTeamScore={item.match_awayteam_score}
           localTeamName={item.match_hometeam_name}
           awayTeamName={item.match_awayteam_name}
+          localTeamBadge={item.team_home_badge}
+          awayTeamBadge={item.team_away_badge}
         />
       )}
     </div>

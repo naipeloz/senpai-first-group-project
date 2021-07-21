@@ -40,13 +40,13 @@ function App() {
         <Route path='/fetch-example'>
           <FetchExample />
         </Route>
-        <Route path='/' exact>
-          <HomePage 
+        <Route path='/FutResults' exact>
+          <FutResults
             isDarkMode={darkMode}
           />
         </Route>
-        <Route path='/FutResults' exact>
-          <FutResults
+        <Route path='/' exact>
+          <HomePage 
             isDarkMode={darkMode}
           />
         </Route>
