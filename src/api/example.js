@@ -3,4 +3,4 @@ const BASE_URL = 'https://apiv3.apifootball.com/'
 
 export const getStaffTeam = () => 
   fetch(`${BASE_URL}?action=get_teams&league_id=302&APIkey=${API_KEY}`)
-    .then(response => response.json());
+    .then(response => response.json()); 
