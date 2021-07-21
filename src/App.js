@@ -35,8 +35,10 @@ function App() {
       </div>
 
       <Switch>
-        <Route path='/news/:id?'>
-          <NewsPage />
+        <Route path='/news/:cat?'>
+          <NewsPage 
+            isDarkMode={darkMode}
+          />
         </Route>
         <Route path='/fetch-weather'>
           <FetchWeather 
