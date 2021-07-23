@@ -1,10 +1,9 @@
 import React from 'react';
 
-const Conversor = ({currencies, quotes}) => {
+const Conversor = ({valor}) => {
     return (
         <div>
-        <p>Aqui iria el dolar{currencies}</p>
-        <p>Aqui iria los valores {quotes}</p>
+        <p>Aqui iria el dolar: {valor}</p>
         </div>
     )
 }
