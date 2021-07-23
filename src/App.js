@@ -6,6 +6,7 @@ import {
 } from 'react-router-dom';
 import HomePage from './pages/Home';
 import NewsPage from './pages/News';
+import MoviesPage from './pages/Movies';
 import { FetchWeather } from './pages/Weather';
 import { FetchExample } from './pages/Example';
 import FutResults from './pages/FutResults';
@@ -52,6 +53,9 @@ function App() {
           <FutResults
             isDarkMode={darkMode}
           />
+        </Route>
+        <Route path='/movies/:id'>
+          <MoviesPage />
         </Route>
         <Route path='/' exact>
           <HomePage 
