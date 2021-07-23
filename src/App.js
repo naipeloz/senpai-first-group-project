@@ -7,6 +7,7 @@ import {
 import HomePage from './pages/Home';
 import NewsPage from './pages/News';
 import MoviesPage from './pages/Movies';
+import FormsPage from './pages/FormsPage';
 import { FetchWeather } from './pages/Weather';
 import { FetchExample } from './pages/Example';
 import FutResults from './pages/FutResults';
@@ -56,6 +57,9 @@ function App() {
         </Route>
         <Route path='/movies/:id'>
           <MoviesPage />
+        </Route>
+        <Route path='/formularios'>
+          <FormsPage />
         </Route>
         <Route path='/' exact>
           <HomePage 
