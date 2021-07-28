@@ -10,6 +10,7 @@ import MoviesPage from './pages/Movies';
 import { FetchWeather } from './pages/Weather';
 import { FetchExample } from './pages/Example';
 import FutResults from './pages/FutResults';
+import MoviesPageGenero from './pages/MoviesGenero';
 
 
 function App() {
@@ -58,18 +59,17 @@ function App() {
         </Route>
 
 
-        <Route path='/peliculas'>
+        <Route path='/peliculas/genero' exact>
+          <MoviesPageGenero />
+        </Route>
+
+        <Route path='/pelicula/:id?' exact>
           <MoviesPage />
         </Route>
 
-        <Route path='/peliculas/genero'>
+        <Route path='/peliculas' exact>
           <MoviesPage />
         </Route>
-
-        <Route path='/pelicula/:id?'>
-          <MoviesPage />
-        </Route>
-
 
 
         <Route path='/' exact>

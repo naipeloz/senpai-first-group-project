@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import { useParams } from 'react-router';
 import Movie from '../components/Movie';
-import getMovie from '../api/movies';
+import {getMovie} from '../api/movies';
 
 
 const MoviesPage = () => {
