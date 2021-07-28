@@ -24,7 +24,6 @@ function App() {
   
   return (
     <Router>
-
       <div className="p-2">
         <button 
           className={`${darkMode ? 'bg-black text-white' : 'bg-white text-black'} text-xs p-2 rounded`}
@@ -57,6 +56,22 @@ function App() {
         <Route path='/movies/:id'>
           <MoviesPage />
         </Route>
+
+
+        <Route path='/peliculas'>
+          <MoviesPage />
+        </Route>
+
+        <Route path='/peliculas/genero'>
+          <MoviesPage />
+        </Route>
+
+        <Route path='/pelicula/:id?'>
+          <MoviesPage />
+        </Route>
+
+
+
         <Route path='/' exact>
           <HomePage 
             isDarkMode={darkMode}

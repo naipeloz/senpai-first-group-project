@@ -23,8 +23,10 @@ const MoviesPage = () => {
     <div>
       {<Movie
         titulo={movie.original_title}
+        languague={movie.original_language}
         descripcion={movie.overview}
         popularidad={movie.popularity}
+        data={movie}
         img={movie.backdrop_path}
       />
       }
