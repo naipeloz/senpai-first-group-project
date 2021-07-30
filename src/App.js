@@ -11,6 +11,7 @@ import { FetchWeather } from './pages/Weather';
 import { FetchExample } from './pages/Example';
 import FutResults from './pages/FutResults';
 import MoviesPageGenero from './pages/MoviesGenero';
+import TrendingPage from './pages/trending.js'
 
 
 function App() {
@@ -57,7 +58,9 @@ function App() {
         <Route path='/movies/:id'>
           <MoviesPage />
         </Route>
-
+         <Route path='/trending'>
+          <TrendingPage />
+        </Route>
 
         <Route path='/peliculas/genero' exact>
           <MoviesPageGenero />

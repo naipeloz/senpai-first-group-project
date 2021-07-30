@@ -17,3 +17,7 @@ export const getPopularMovie = () =>
   fetch(`${BASE_URL}movie/popular?api_key=${API_KEY}&language=en-US`)
     .then(response => response.json());
 
+export const getTrendingMovie = () => 
+  // https://api.themoviedb.org/3/trending/all/week?api_key=35ae0ab849a7893db02cf33f003e017f
+  fetch(`https://api.themoviedb.org/3/trending/all/week?api_key=35ae0ab849a7893db02cf33f003e017f`)
+    .then(response => response.json());
