@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import { useParams } from 'react-router';
 import Movie from '../components/Movie';
-import getMovie from '../api/movies';
+import {getMovie} from '../api/movies';
 
 
 const MoviesPage = () => {
@@ -23,8 +23,10 @@ const MoviesPage = () => {
     <div>
       {<Movie
         titulo={movie.original_title}
+        languague={movie.original_language}
         descripcion={movie.overview}
         popularidad={movie.popularity}
+        data={movie}
         img={movie.backdrop_path}
       />
       }

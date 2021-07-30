@@ -10,6 +10,7 @@ import MoviesPage from './pages/Movies';
 import { FetchWeather } from './pages/Weather';
 import { FetchExample } from './pages/Example';
 import FutResults from './pages/FutResults';
+import MoviesPageGenero from './pages/MoviesGenero';
 
 
 function App() {
@@ -24,7 +25,6 @@ function App() {
   
   return (
     <Router>
-
       <div className="p-2">
         <button 
           className={`${darkMode ? 'bg-black text-white' : 'bg-white text-black'} text-xs p-2 rounded`}
@@ -57,6 +57,21 @@ function App() {
         <Route path='/movies/:id'>
           <MoviesPage />
         </Route>
+
+
+        <Route path='/peliculas/genero' exact>
+          <MoviesPageGenero />
+        </Route>
+
+        <Route path='/pelicula/:id?' exact>
+          <MoviesPage />
+        </Route>
+
+        <Route path='/peliculas' exact>
+          <MoviesPage />
+        </Route>
+
+
         <Route path='/' exact>
           <HomePage 
             isDarkMode={darkMode}
