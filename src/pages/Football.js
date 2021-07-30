@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { getTopScorers } from '../api/football';
+import Player from '../components/Scorers';
 
 const ScorersPage = () => {
     const [Scorers, setScorers] = useState([]);
@@ -9,7 +10,6 @@ const ScorersPage = () => {
             if(response.error){
                 alert("No se pudo consultar")
             } else {
-                console.log(response)
                 const results = response;
                 setScorers(results)
             }  
@@ -18,7 +18,16 @@ const ScorersPage = () => {
 
 
     return (
-        <h1>Hola</h1>
+        <div className="container mx-auto">
+            {Scorers?.map(item =>
+            <Player
+                player={item.player_name}
+                goals={item.goals}
+            />
+            )
+
+            }
+        </div>
     )
 
 }
