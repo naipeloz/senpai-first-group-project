@@ -10,6 +10,8 @@ import MoviesPage from './pages/Movies';
 import { FetchWeather } from './pages/Weather';
 import { FetchExample } from './pages/Example';
 import FutResults from './pages/FutResults';
+import ScorersPage from './pages/Football';
+
 
 
 function App() {
@@ -61,6 +63,9 @@ function App() {
           <HomePage 
             isDarkMode={darkMode}
           />
+        </Route>
+        <Route path='/Scorers'>
+          <ScorersPage />
         </Route>
       </Switch>
     </Router>
