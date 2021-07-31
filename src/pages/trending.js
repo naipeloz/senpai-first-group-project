@@ -17,7 +17,7 @@ const TrendingPage = () => {
 return (
     <div className="container mx-auto">
       {matches?.map(item => 
-        <Movie
+        <Movie className="flex w-2/4"
           key={item.id}
           titulo={item.title}
           descripcion={item.overview}

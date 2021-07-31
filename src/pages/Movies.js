@@ -21,7 +21,7 @@ const MoviesPage = () => {
 
   return(
     <div>
-      {<Movie
+      {<Movie 
         titulo={movie.original_title}
         languague={movie.original_language}
         descripcion={movie.overview}
